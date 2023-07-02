@@ -17,6 +17,11 @@ const routes: RouteRecordRaw[] = [
     path: '/contact',
     name: 'Contact',
     component: () => import('@/views/AppContact.vue')
+  },
+  {
+    path: '/trip/:id',
+    name: 'Trip',
+    component: () => import('@/views/TripView.vue')
   }
 ]
 

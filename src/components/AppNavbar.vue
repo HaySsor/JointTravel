@@ -3,7 +3,7 @@
     <RouterLink :to="{ name: 'Home' }" class="navbar__link-logo" @click="() => (isOpen = false)">
       <img src="/house.png" alt="." aria-hidden="true" />
     </RouterLink>
-    <button class="navbar__button" @click="toggleOpen" v-if="windowSize < 587">
+    <button class="navbar__button" @click="toggleOpen">
       <div
         class="navbar__button-line navbar__button-line--one"
         :style="{
@@ -23,7 +23,7 @@
         }"
       ></div>
     </button>
-    <nav v-if="desktopVersion" class="navbar__nav-desktop">
+    <nav class="navbar__nav-desktop">
       <ul class="navbar__nav-desktop-list-desktop">
         <li>
           <RouterLink :to="{ name: 'About' }" class="navbar__nav-desktop-list-desktop-item">
@@ -55,10 +55,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, watch, onUnmounted } from 'vue'
-import { useWindowSize } from '../hooks/useWindowSize'
-
-const { windowSize, resize, disableResize } = useWindowSize()
+import { ref, computed } from 'vue'
 
 const isOpen = ref<boolean>(false)
 
@@ -82,24 +79,6 @@ const closeMenu = () => {
 const toggleOpen = () => {
   isOpen.value = !isOpen.value
 }
-
-const desktopVersion = ref<boolean>(window.innerWidth > 586)
-
-onMounted(() => {
-  resize()
-})
-onUnmounted(() => {
-  disableResize()
-})
-
-watch(windowSize, (windowWidth) => {
-  if (windowWidth > 586) {
-    desktopVersion.value = true
-    isOpen.value = false
-  } else {
-    desktopVersion.value = false
-  }
-})
 </script>
 
 <style lang="scss">
@@ -110,7 +89,7 @@ watch(windowSize, (windowWidth) => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: lightseagreen;
+  background-color: #20b2aa;
   z-index: 10;
   &__link-logo {
     margin-left: 20px;
@@ -164,8 +143,45 @@ watch(windowSize, (windowWidth) => {
       }
     }
   }
+  &__nav-desktop {
+    display: none;
+  }
 }
 
+@media screen and (min-width: 586px) {
+  .navbar {
+    &__nav-desktop {
+      display: block;
+      width: 250px;
+      &-list-desktop {
+        display: flex;
+
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+
+        &-item {
+          text-decoration: none;
+          padding: 15px;
+          font-size: 1.8rem;
+          color: white;
+          &:is(.active) {
+            padding-bottom: 10px;
+            border-bottom: 2px solid darkslategray;
+          }
+        }
+      }
+    }
+    &__button {
+      display: none;
+    }
+    &__nav {
+      display: none;
+    }
+  }
+}
+
+/* Animation */
 @keyframes openNavbar {
   from {
     height: 0px;
@@ -185,33 +201,6 @@ watch(windowSize, (windowWidth) => {
   }
 }
 
-@media screen and (min-width: 586px) {
-  .navbar {
-    &__nav-desktop {
-      width: 250px;
-      &-list-desktop {
-        display: flex;
-
-        justify-content: space-around;
-        align-items: center;
-        list-style: none;
-
-        &-item {
-          text-decoration: none;
-          padding: 15px;
-          font-size: 1.6rem;
-          color: white;
-          &:is(.active) {
-            padding-bottom: 10px;
-            border-bottom: 2px solid darkslategray;
-          }
-        }
-      }
-    }
-  }
-}
-
-/* Animation */
 @keyframes lineOneCloseAnime {
   to {
     transform: translate(0px, 7px) rotate(45deg);

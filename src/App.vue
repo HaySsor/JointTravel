@@ -35,4 +35,11 @@ setTimeout(function () {
 .fade-leave-active {
   transition: all 0.3s ease-in;
 }
+
+@media screen and (min-width: 1500px) {
+  .wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+}
 </style>
