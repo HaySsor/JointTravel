@@ -1,12 +1,16 @@
 <template>
   <div class="trips-container">
-    <TripsItem v-for="trip in 12" :key="trip" />
+    <TripsItem v-for="trip in data" :key="trip.id" :trip="trip" />
     <div class="trips-container-blob"></div>
   </div>
 </template>
 
 <script setup lang="ts">
 import TripsItem from './TripsItem.vue'
+import { useFakeFetch } from '@/hooks/useFakeFetch'
+
+const { data, fetchData } = useFakeFetch()
+await fetchData()
 </script>
 
 <style lang="scss">

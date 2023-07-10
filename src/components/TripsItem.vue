@@ -1,27 +1,33 @@
 <template>
-  <RouterLink :to="{ name: 'Trip', params: { id: '1' } }" class="trip-link">
-    <div
-      class="trip-item-box"
-      v-motion
-      :initial="{
-        opacity: 0,
-        y: 100
-      }"
-      :visibleOnce="{
-        opacity: 1,
-        y: 0,
-        transition: {
-          delay: 200
-        }
-      }"
-    >
-      <img src="/public/photo/trip1.jpeg" />
-      <h3 class="trip-item-box-title">Mountain</h3>
+  <RouterLink :to="{ name: 'Trip', params: { id: props.trip?.id } }" class="trip-link">
+    <div class="trip-item-box" ref="targetEl">
+      <img :src="props.trip?.src" />
+      <h3 class="trip-item-box-title">{{ props.trip?.title }}</h3>
     </div>
   </RouterLink>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref, type PropType } from 'vue'
+import { useMotion } from '@vueuse/motion'
+import type { Trip } from '@/types/types'
+
+const props = defineProps({
+  trip: Object as PropType<Trip>
+})
+
+const targetEl = ref()
+useMotion(targetEl, {
+  initial: {
+    opacity: 0,
+    y: 100
+  },
+  visibleOnce: {
+    opacity: 1,
+    y: 0
+  }
+})
+</script>
 
 <style lang="scss">
 .trip-link {

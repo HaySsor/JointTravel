@@ -50,14 +50,20 @@
       </a>
     </header>
     <section id="trips" class="trips-section">
-      <h2 class="trips-section-title">Trips</h2>
-      <TripsList />
+      <h2 class="trips-section-title">Where you want to GO 🤔</h2>
+      <Suspense>
+        <TripsList />
+        <template #fallback>
+          <AppLoader />
+        </template>
+      </Suspense>
     </section>
   </main>
 </template>
 
 <script setup lang="ts">
 import TripsList from '@/components/TripsList.vue'
+import AppLoader from '@/components/AppLoader.vue'
 </script>
 
 <style lang="scss">
@@ -118,6 +124,7 @@ import TripsList from '@/components/TripsList.vue'
         &-icon {
           position: absolute;
           left: 50%;
+          bottom: 30px;
           transform: translateX(-50%);
         }
       }
@@ -125,6 +132,8 @@ import TripsList from '@/components/TripsList.vue'
   }
   .trips-section {
     margin-top: 100px;
+    position: relative;
+    min-height: 250px;
 
     &-title {
       font-size: 3rem;
@@ -171,6 +180,12 @@ import TripsList from '@/components/TripsList.vue'
               font-size: 1.8rem;
             }
           }
+          &-icon {
+          position: absolute;
+          left: 50%;
+          bottom: 200px;
+          transform: translateX(-50%);
+        }
         }
       }
     }

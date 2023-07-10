@@ -21,7 +21,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/trip/:id',
     name: 'Trip',
-    component: () => import('@/views/TripView.vue')
+    component: () => import('@/views/TripGroupView.vue')
   }
 ]
 
