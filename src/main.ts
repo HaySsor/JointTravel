@@ -1,21 +1,27 @@
 import './assets/main.scss'
 
-import { createApp } from 'vue'
+import { createApp, type App } from 'vue'
 import { createPinia } from 'pinia'
 import { MotionPlugin } from '@vueuse/motion'
 
-import App from './App.vue'
+import AppC from './App.vue'
 import router from './router'
 import Unicon from 'vue-unicons'
 import { uniArrowCircleDown } from 'vue-unicons/dist/icons'
+import { auth } from './helpers/firebase'
 
 Unicon.add([uniArrowCircleDown])
 
-const app = createApp(App)
+let app: App
 
-app.use(createPinia())
-app.use(router)
-app.use(MotionPlugin)
-app.use(Unicon)
+auth.onAuthStateChanged(() => {
+  if (!app) {
+    const app = createApp(AppC)
+    app.use(createPinia())
+    app.use(router)
+    app.use(MotionPlugin)
+    app.use(Unicon)
 
-app.mount('#app')
+    app.mount('#app')
+  }
+})

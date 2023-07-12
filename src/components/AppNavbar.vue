@@ -3,26 +3,32 @@
     <RouterLink :to="{ name: 'Home' }" class="navbar__link-logo" @click="() => (isOpen = false)">
       <img src="/house.png" alt="." aria-hidden="true" />
     </RouterLink>
-    <button class="navbar__button" @click="toggleOpen">
-      <div
-        class="navbar__button-line navbar__button-line--one"
-        :style="{
-          animation: dynamicClassBarsOne + '.5s' + ' forwards'
-        }"
-      ></div>
-      <div
-        class="navbar__button-line navbar__button-line--two"
-        :style="{
-          animation: dynamicClassBarsTwo + '.5s' + ' forwards'
-        }"
-      ></div>
-      <div
-        class="navbar__button-line navbar__button-line--three"
-        :style="{
-          animation: dynamicClassBarsThree + '.5s' + ' forwards'
-        }"
-      ></div>
-    </button>
+    <div class="navbar-box">
+      <span v-if="userStore.user.ifLogged" class="navbar-box-name">{{
+        userStore.user.userName
+      }}</span>
+      <button class="navbar__button" @click="toggleOpen">
+        <div
+          class="navbar__button-line navbar__button-line--one"
+          :style="{
+            animation: dynamicClassBarsOne + '.5s' + ' forwards'
+          }"
+        ></div>
+        <div
+          class="navbar__button-line navbar__button-line--two"
+          :style="{
+            animation: dynamicClassBarsTwo + '.5s' + ' forwards'
+          }"
+        ></div>
+        <div
+          class="navbar__button-line navbar__button-line--three"
+          :style="{
+            animation: dynamicClassBarsThree + '.5s' + ' forwards'
+          }"
+        ></div>
+      </button>
+    </div>
+
     <nav class="navbar__nav-desktop">
       <ul class="navbar__nav-desktop-list-desktop">
         <li>
@@ -50,14 +56,26 @@
           Contact
         </RouterLink>
       </li>
+      <li v-if="!userStore.user.ifLogged">
+        <RouterLink :to="{ name: 'Login' }" @click="closeMenu" class="navbar__nav-list-item">
+          Login
+        </RouterLink>
+      </li>
+      <li v-else>
+        <RouterLink :to="{ name: 'Home' }" @click="logout" class="navbar__nav-list-item">
+          Logout
+        </RouterLink>
+      </li>
     </ul>
   </nav>
 </template>
 
 <script setup lang="ts">
+import { useUserStore } from '@/stores/user'
 import { ref, computed } from 'vue'
 
 const isOpen = ref<boolean>(false)
+const userStore = useUserStore()
 
 const dynamicClass = computed(() => {
   return isOpen.value ? 'openNavbar' : 'closeNavbar'
@@ -75,6 +93,10 @@ const dynamicClassBarsThree = computed(() => {
 const closeMenu = () => {
   isOpen.value = false
 }
+const logout = async () => {
+  isOpen.value = false
+  await userStore.LogoutUser()
+}
 
 const toggleOpen = () => {
   isOpen.value = !isOpen.value
@@ -91,6 +113,17 @@ const toggleOpen = () => {
   justify-content: space-between;
   background-color: #20b2aa;
   z-index: 10;
+  &-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    &-name {
+      font-size: 1.8rem;
+      color: white;
+    }
+  }
+
   &__link-logo {
     margin-left: 20px;
     width: 50px;
@@ -188,7 +221,7 @@ const toggleOpen = () => {
     padding: 0px;
   }
   to {
-    height: 100px;
+    height: 135px;
   }
 }
 @keyframes closeNavbar {

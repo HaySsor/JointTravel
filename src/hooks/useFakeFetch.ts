@@ -1,14 +1,14 @@
 import { ref } from 'vue'
-import type { Trip } from '../types/types'
+import type { Group } from '../types/types'
 
 import Trips from '../data/trips.json'
 
 export const useFakeFetch = () => {
-  const data = ref<Trip[] | null>(null)
+  const data = ref<Group[] | null>(null)
 
   const fetchData = async () => {
     await wait(2000)
-    const res: Trip[] = Trips.trips
+    const res: Group[] = Trips.trips
     data.value = [...res]
   }
 
@@ -16,12 +16,12 @@ export const useFakeFetch = () => {
 }
 
 export const useFakeSpecificsFetch = () => {
-  const chosenGroup = ref<Trip | null>(null)
+  const chosenGroup = ref<Group | null>(null)
 
-  const fetchSpecificsData = async (id: number) => {
+  const fetchSpecificsData = async (group: string) => {
     await wait(1000)
-    const res: Trip[] = Trips.trips
-    const find = res.find((item) => item.id === id)
+    const res: Group[] = Trips.trips
+    const find = res.find((item) => item.title.toLocaleLowerCase() === group)
 
     if (find) {
       chosenGroup.value = find

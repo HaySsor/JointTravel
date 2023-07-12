@@ -15,13 +15,11 @@ import FreeTripsList from '@/components/FreeTripsList.vue'
 const { chosenGroup, fetchSpecificsData } = useFakeSpecificsFetch()
 
 const {
-  params: { id }
+  params: { group }
 } = useRoute()
 
-window.scrollTo(0, 0)
-
 onMounted(() => {
-  if (typeof id === 'string') fetchSpecificsData(parseInt(id))
+  typeof group === 'string' ? fetchSpecificsData(group) : null
 })
 </script>
 

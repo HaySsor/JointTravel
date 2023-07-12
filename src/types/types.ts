@@ -1,4 +1,4 @@
-export type Trip = {
+export type Group = {
   id: number
   src: string
   title: string
@@ -15,5 +15,10 @@ export type freeTrips = {
   dateOfEnd: string
   difficultyLevel: number
   price: string
-  src: string
+  src?: string
+}
+
+export type UserData = {
+  email: string
+  password: string
 }

@@ -1,8 +1,20 @@
 <script setup lang="ts">
 import AppNavbar from './components/AppNavbar.vue'
+import { useUserStore } from './stores/user'
+import { auth } from './helpers/firebase'
 setTimeout(function () {
   document.body.className = ''
 }, 500)
+
+const userStore = useUserStore()
+
+if (auth.currentUser) {
+  userStore.user.ifLogged = true
+  const userName = auth.currentUser?.email?.match(/^(.*?)@/)
+  if (userName !== null && userName) {
+    userStore.user.userName = userName[1]
+  }
+}
 </script>
 
 <template>

@@ -97,6 +97,7 @@ defineProps<{
     &-guide {
       width: 30px;
       aspect-ratio: 1;
+
       img {
         width: 100%;
       }
@@ -106,8 +107,12 @@ defineProps<{
         width: 60px;
         display: flex;
         justify-content: center;
-        align-content: start;
+        text-align: center;
         font-size: 1.2rem;
+        background-color: white;
+        box-shadow: 0 5px 15px rgba(47, 79, 79, 0.478);
+        border-radius: 20px;
+        padding: 2px;
       }
     }
   }

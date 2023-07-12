@@ -19,8 +19,13 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/views/AppContact.vue')
   },
   {
-    path: '/trip/:id',
-    name: 'Trip',
+    path: '/login',
+    name: 'Login',
+    component: () => import('@/views/AppLogin.vue')
+  },
+  {
+    path: '/:group',
+    name: 'Group',
     component: () => import('@/views/TripGroupView.vue')
   }
 ]
@@ -29,7 +34,11 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 
-  linkExactActiveClass: 'active'
+  linkExactActiveClass: 'active',
+  scrollBehavior(to, from, savedPosition) {
+    // always scroll to top
+    return { top: 0 }
+  }
 })
 
 export default router

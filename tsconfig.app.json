@@ -6,7 +6,8 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/types/types.ts",
-    "src/data/trips.json"
+    "src/data/trips.json",
+    "src/helpers/firebase.ts"
   ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {

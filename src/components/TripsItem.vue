@@ -1,5 +1,5 @@
 <template>
-  <RouterLink :to="{ name: 'Trip', params: { id: props.trip?.id } }" class="trip-link">
+  <RouterLink :to="{ name: 'Group', params: { group: props.trip?.title.toLocaleLowerCase() } }" class="trip-link">
     <div class="trip-item-box" ref="targetEl">
       <img :src="props.trip?.src" />
       <h3 class="trip-item-box-title">{{ props.trip?.title }}</h3>
@@ -10,10 +10,10 @@
 <script setup lang="ts">
 import { ref, type PropType } from 'vue'
 import { useMotion } from '@vueuse/motion'
-import type { Trip } from '@/types/types'
+import type { Group } from '@/types/types'
 
 const props = defineProps({
-  trip: Object as PropType<Trip>
+  trip: Object as PropType<Group>
 })
 
 const targetEl = ref()
