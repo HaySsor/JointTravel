@@ -14,7 +14,7 @@
         </div>
         <div class="login__form-box">
           <label>Password</label>
-          <input v-model="userData.password" type="password"  required="true" minlength="6"/>
+          <input v-model="userData.password" type="password" required="true" minlength="6" />
         </div>
         <button>{{ isLoginLook ? 'Login' : 'Registration' }}</button>
       </form>
@@ -99,6 +99,9 @@ const submitData = async () => {
       margin-left: 50px;
       font-size: 3rem;
       position: relative;
+      .dark & {
+        color: white;
+      }
     }
     button {
       padding: 10px 15px;

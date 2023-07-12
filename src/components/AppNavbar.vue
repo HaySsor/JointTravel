@@ -1,8 +1,12 @@
 <template>
   <header class="navbar">
-    <RouterLink :to="{ name: 'Home' }" class="navbar__link-logo" @click="() => (isOpen = false)">
-      <img src="/house.png" alt="." aria-hidden="true" />
-    </RouterLink>
+    <div class="navbar__link">
+      <RouterLink :to="{ name: 'Home' }" class="navbar__link-logo" @click="() => (isOpen = false)">
+        <img src="/house.png" alt="." aria-hidden="true" />
+      </RouterLink>
+      <input type="checkbox" class="dark-mode-switch" v-model="darkMode" />
+    </div>
+
     <div class="navbar-box">
       <span v-if="userStore.user.ifLogged" class="navbar-box-name">{{
         userStore.user.userName
@@ -72,10 +76,18 @@
 
 <script setup lang="ts">
 import { useUserStore } from '@/stores/user'
-import { ref, computed } from 'vue'
+import { useDark, useToggle } from '@vueuse/core'
+import { ref, computed, watch } from 'vue'
 
 const isOpen = ref<boolean>(false)
 const userStore = useUserStore()
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
+const darkMode = ref(false)
+
+watch(darkMode, () => {
+  toggleDark()
+})
 
 const dynamicClass = computed(() => {
   return isOpen.value ? 'openNavbar' : 'closeNavbar'
@@ -123,19 +135,58 @@ const toggleOpen = () => {
       color: white;
     }
   }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    &-logo {
+      width: 50px;
+      height: 50px;
+      margin-left: 20px;
+      border: 3px solid darkslategray;
+      border-radius: 20px;
+      background-color: lightgoldenrodyellow;
 
-  &__link-logo {
-    margin-left: 20px;
-    width: 50px;
-    height: 50px;
-    border: 3px solid darkslategray;
-    border-radius: 20px;
-    background-color: lightgoldenrodyellow;
+      img {
+        width: 100%;
+      }
+    }
+    input[type='checkbox'] {
+      --webkit-appearance: none;
+      --moz-appearance: none;
+      appearance: none;
+      position: relative;
+      height: 25px;
+      width: 45px;
+      background-color: white;
+      border-radius: 5rem;
+      transition: background-color 0.3s;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.282);
 
-    img {
-      width: 100%;
+      &::after {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: gold;
+        transition: left 0.3s;
+      }
+      &:checked {
+        background-color: #333;
+
+        &::after {
+          left: 70%;
+          background-color: rgb(166, 166, 166);
+        }
+      }
     }
   }
+
   &__button {
     display: flex;
     justify-content: center;

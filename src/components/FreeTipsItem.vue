@@ -77,7 +77,7 @@ defineProps<{
   padding: 15px;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 3px solid rgba(23, 128, 123, 0.518);
+  border: 3px solid rgba(23, 128, 123);
   flex-direction: column;
   display: flex;
   justify-content: space-between;
@@ -92,7 +92,9 @@ defineProps<{
       padding: 5px 15px;
       border-radius: 20px;
       box-shadow: 0 5px 15px rgba(47, 79, 79, 0.478);
-      border: 3px solid rgba(23, 128, 123, 0.493);
+      border: 3px solid rgba(23, 128, 123);
+
+      
     }
     &-guide {
       width: 30px;

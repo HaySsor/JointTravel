@@ -9,7 +9,7 @@
         :delay="200"
       >
         <h1 class="header-home__hero-title">JointTrips</h1>
-        <img src="/photo/heroImg.jpg" alt="" />
+        <img src="/public/photo/heroImg-removebg.png" alt="" />
       </div>
       <div
         class="header-home__info"
@@ -79,12 +79,15 @@ import AppLoader from '@/components/AppLoader.vue'
         top: 3%;
         left: 15%;
         font-size: 3.5rem;
-
         border-bottom: 3px solid rgba(32, 178, 171, 0.288);
+
+        .dark & {
+          color: white;
+        }
       }
       img {
-        width: 100%;
         mix-blend-mode: darken;
+        width: 100%;
       }
     }
     &__info {
@@ -140,6 +143,9 @@ import AppLoader from '@/components/AppLoader.vue'
       text-align: center;
       margin-bottom: 30px;
       position: relative;
+      .dark & {
+        color: white;
+      }
 
       &::after {
         content: '';
@@ -181,11 +187,11 @@ import AppLoader from '@/components/AppLoader.vue'
             }
           }
           &-icon {
-          position: absolute;
-          left: 50%;
-          bottom: 200px;
-          transform: translateX(-50%);
-        }
+            position: absolute;
+            left: 50%;
+            bottom: 200px;
+            transform: translateX(-50%);
+          }
         }
       }
     }
