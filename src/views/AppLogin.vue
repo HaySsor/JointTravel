@@ -164,4 +164,27 @@ const submitData = async () => {
   font-size: 1.5rem;
   color: lightcoral;
 }
+
+@media screen and (min-width: 586px) {
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    &__form {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 30px;
+      padding: 20px;
+      background-color: rgba(32, 178, 171, 0.779);
+      border-radius: 25px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.226);
+      width: 60%;
+    }
+  }
+}
 </style>

@@ -1,6 +1,7 @@
 <template>
   <div class="trips-container">
     <TripsItem v-for="trip in data" :key="trip.id" :trip="trip" />
+
     <div class="trips-container-blob"></div>
   </div>
 </template>

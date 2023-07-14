@@ -45,6 +45,16 @@
             Contact
           </RouterLink>
         </li>
+        <li v-if="!userStore.user.ifLogged">
+          <RouterLink :to="{ name: 'Login' }" @click="closeMenu" class="navbar__nav-list-item">
+            Login
+          </RouterLink>
+        </li>
+        <li v-else>
+          <RouterLink :to="{ name: 'Home' }" @click="logout" class="navbar__nav-list-item">
+            Logout
+          </RouterLink>
+        </li>
       </ul>
     </nav>
   </header>
@@ -79,11 +89,13 @@ import { useUserStore } from '@/stores/user'
 import { useDark, useToggle } from '@vueuse/core'
 import { ref, computed, watch } from 'vue'
 
+const localHostDarkMode = localStorage.getItem('vueuse-color-scheme')
+
 const isOpen = ref<boolean>(false)
 const userStore = useUserStore()
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
-const darkMode = ref(false)
+const darkMode = ref(localHostDarkMode === 'auto' ? false : true)
 
 watch(darkMode, () => {
   toggleDark()
@@ -243,7 +255,7 @@ const toggleOpen = () => {
         justify-content: space-around;
         align-items: center;
         list-style: none;
-
+        margin-right: 30px;
         &-item {
           text-decoration: none;
           padding: 15px;

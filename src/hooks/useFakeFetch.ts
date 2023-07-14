@@ -16,19 +16,15 @@ export const useFakeFetch = () => {
 }
 
 export const useFakeSpecificsFetch = () => {
-  const chosenGroup = ref<Group | null>(null)
-
   const fetchSpecificsData = async (group: string) => {
     await wait(1000)
     const res: Group[] = Trips.trips
     const find = res.find((item) => item.title.toLocaleLowerCase() === group)
 
-    if (find) {
-      chosenGroup.value = find
-    }
+    return find?.freeTrips
   }
 
-  return { chosenGroup, fetchSpecificsData }
+  return { fetchSpecificsData }
 }
 
 const wait = (time: number) => {

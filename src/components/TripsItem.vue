@@ -1,5 +1,8 @@
 <template>
-  <RouterLink :to="{ name: 'Group', params: { group: props.trip?.title.toLocaleLowerCase() } }" class="trip-link">
+  <RouterLink
+    :to="{ name: 'Group', params: { group: props.trip?.title.toLocaleLowerCase(), defLevel: 0 } }"
+    class="trip-link"
+  >
     <div class="trip-item-box" ref="targetEl">
       <img :src="props.trip?.src" />
       <h3 class="trip-item-box-title">{{ props.trip?.title }}</h3>

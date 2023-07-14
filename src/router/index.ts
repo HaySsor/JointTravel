@@ -24,7 +24,7 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/views/AppLogin.vue')
   },
   {
-    path: '/:group',
+    path: '/:group/:defLevel',
     name: 'Group',
     component: () => import('@/views/TripGroupView.vue')
   }
