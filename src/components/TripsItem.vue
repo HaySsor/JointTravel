@@ -3,7 +3,7 @@
     :to="{
       name: 'Group',
       params: { group: props.trip?.title.toLocaleLowerCase() },
-      query: { defLevel: 0 }
+      query: { defLevel: 0, vacancies: 0 }
     }"
     class="trip-link"
   >

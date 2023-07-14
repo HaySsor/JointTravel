@@ -11,6 +11,10 @@
           </option>
         </select>
       </div>
+      <div class="option-box">
+        <span class="text">Free Vacancies</span>
+        <input type="number" class="filter-box__input" v-model="numberOfVacancies" />
+      </div>
     </div>
     <FreeTripsList v-if="DisplayListFilter" :trips="DisplayListFilter" />
   </main>
@@ -31,6 +35,7 @@ const defLevelSelect = ref<any>(route.query.defLevel || '0')
 
 const filterList = ref<freeTrips[] | null>(null)
 const maxDefLevelInTrip = ref<number[]>([])
+const numberOfVacancies = ref(route.query.vacancies || '0')
 
 onMounted(async () => {
   const res = await fetchSpecificsData(route.params.group.toString())
@@ -43,8 +48,24 @@ watch(defLevelSelect, (newValue) => {
   router.push({
     name: 'Group',
     params: { ...route.params },
-    query: { defLevel: newValue.toString() }
+    query: { ...route.query, defLevel: newValue.toString() }
   })
+})
+
+watch(numberOfVacancies, (newValue) => {
+  if (newValue === '') {
+    router.push({
+      name: 'Group',
+      params: { ...route.params },
+      query: { ...route.query, vacancies: '0' }
+    })
+  } else {
+    router.push({
+      name: 'Group',
+      params: { ...route.params },
+      query: { ...route.query, vacancies: newValue }
+    })
+  }
 })
 
 watch(filterList, () => {
@@ -54,11 +75,31 @@ watch(filterList, () => {
   }
 })
 
+const filterArrayOfNumberVacancies = (array: freeTrips[]) => {
+  return array?.filter((item) => item.vacancies >= parseFloat(numberOfVacancies.value.toString()))
+}
+
 const DisplayListFilter = computed(() => {
-  const list = filterList.value?.filter(
-    (trip) => trip.difficultyLevel <= parseFloat(defLevelSelect.value)
-  )
-  return defLevelSelect.value == '0' ? filterList.value : list
+  let list = filterList.value
+
+  if (numberOfVacancies.value !== '0' && numberOfVacancies.value !== '' && list !== null) {
+    const newList = filterArrayOfNumberVacancies(list)
+    if (newList) {
+      list = newList
+    }
+  }
+
+  if (defLevelSelect.value !== '0') {
+    let newList = list?.filter((item) => item.difficultyLevel <= parseFloat(defLevelSelect.value))
+    if (newList) {
+      if (numberOfVacancies.value !== '0' && numberOfVacancies.value !== '') {
+        newList = filterArrayOfNumberVacancies(newList)
+      }
+      list = newList
+    }
+  }
+
+  return list
 })
 </script>
 
@@ -74,14 +115,16 @@ const DisplayListFilter = computed(() => {
   padding: 10px;
   border-radius: 25px;
   margin-bottom: 10px;
+  gap: 10px;
 
   .option-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     .text {
       font-size: 1.4rem;
+      text-align: center;
       .dark & {
         color: white;
       }
@@ -92,6 +135,12 @@ const DisplayListFilter = computed(() => {
     border: none;
     border: 1px solid darkslategray;
     border-radius: 25px;
+  }
+  &__input {
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid darkslategray;
+    width: 50px;
   }
 }
 </style>
