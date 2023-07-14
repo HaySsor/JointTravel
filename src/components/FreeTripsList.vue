@@ -23,6 +23,7 @@ defineProps<{
   place-items: center;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 10px;
+  .list-move,
   .list-enter-active,
   .list-leave-active {
     transition: all 0.5s ease;
@@ -31,6 +32,9 @@ defineProps<{
   .list-leave-to {
     opacity: 0;
     transform: translateX(30px);
+  }
+  .list-leave-active {
+    position: absolute;
   }
 }
 </style>

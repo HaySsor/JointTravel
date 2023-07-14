@@ -6,20 +6,13 @@
         <span class="text">Difficult Level</span>
         <select class="filter-box__select" v-model="defLevelSelect">
           <option value="0">All trips</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
+          <option v-for="option in maxDefLevelInTrip" :value="option" :key="option">
+            {{ option }}
+          </option>
         </select>
       </div>
     </div>
-    <FreeTripsList v-if="ListFilter" :trips="ListFilter" />
+    <FreeTripsList v-if="DisplayListFilter" :trips="DisplayListFilter" />
   </main>
 </template>
 
@@ -33,37 +26,38 @@ import type { freeTrips } from '@/types/types'
 
 const { fetchSpecificsData } = useFakeSpecificsFetch()
 const router = useRouter()
-
-const {
-  params: { group, defLevel }
-} = useRoute()
+const route = useRoute()
+const defLevelSelect = ref<any>(route.query.defLevel || '0')
 
 const filterList = ref<freeTrips[] | null>(null)
+const maxDefLevelInTrip = ref<number[]>([])
 
 onMounted(async () => {
-  const res = await fetchSpecificsData(group.toString())
+  const res = await fetchSpecificsData(route.params.group.toString())
   if (res) {
     filterList.value = res
   }
 })
 
-const defLevelSelect = ref(defLevel)
-
 watch(defLevelSelect, (newValue) => {
   router.push({
     name: 'Group',
-    params: {
-      group,
-      defLevel: newValue
-    }
+    params: { ...route.params },
+    query: { defLevel: newValue.toString() }
   })
 })
 
-const ListFilter = computed(() => {
-  const list = filterList.value?.filter(
-    (trip) => trip.difficultyLevel <= parseFloat(defLevelSelect.value.toString())
-  )
+watch(filterList, () => {
+  const listDefLevelTrip = filterList.value?.map((item) => item.difficultyLevel)
+  if (listDefLevelTrip) {
+    maxDefLevelInTrip.value = [...new Set(listDefLevelTrip)].sort((a, b) => a - b)
+  }
+})
 
+const DisplayListFilter = computed(() => {
+  const list = filterList.value?.filter(
+    (trip) => trip.difficultyLevel <= parseFloat(defLevelSelect.value)
+  )
   return defLevelSelect.value == '0' ? filterList.value : list
 })
 </script>

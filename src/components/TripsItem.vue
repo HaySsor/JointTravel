@@ -1,6 +1,10 @@
 <template>
   <RouterLink
-    :to="{ name: 'Group', params: { group: props.trip?.title.toLocaleLowerCase(), defLevel: 0 } }"
+    :to="{
+      name: 'Group',
+      params: { group: props.trip?.title.toLocaleLowerCase() },
+      query: { defLevel: 0 }
+    }"
     class="trip-link"
   >
     <div class="trip-item-box" ref="targetEl">
