@@ -6,7 +6,7 @@
       "title": "Mountain",
       "freeTrips": [
         {
-          "id": 1.1,
+          "id": "1,1",
           "title": "MOUNT EVEREST",
           "guide": "John Snow",
           "src": "/public/freetrips/everest.jpeg",
@@ -19,7 +19,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 1.2,
+          "id": "1,2",
           "title": "K2",
           "guide": "Mike Men",
           "src": "/public/freetrips/k2.jpeg",
@@ -32,7 +32,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 1.3,
+          "id": "1,3",
           "title": "KANGCHENJUNGA",
           "guide": "Josep Pasta",
           "src": "/public/freetrips/KANGCHENJUNGA.jpeg",
@@ -45,7 +45,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 1.4,
+          "id": "1,4",
           "title": "MANASLU",
           "guide": "Bill Up",
           "src": "/public/freetrips/MANASLU.jpeg",
@@ -58,7 +58,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 1.5,
+          "id": "1,5",
           "title": "NANGA PARBAT",
           "src": "/public/freetrips/NANGA_PARBAT.jpeg",
           "guide": "Pana Kota",
@@ -78,7 +78,7 @@
       "title": "Lake",
       "freeTrips": [
         {
-          "id": 2.1,
+          "id": "2,1",
           "title": "Caspian Sea",
           "src": "/public/freetrips/lake1.jpeg",
           "guide": "Mark Be",
@@ -91,7 +91,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 2.2,
+          "id": "2,2",
           "title": "Lake Superior",
           "guide": "Susan Yo",
           "src": "/public/freetrips/lake2.jpeg",
@@ -104,7 +104,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 2.3,
+          "id": "2,3",
           "title": "Lake Victoria",
           "guide": "Morgan goold",
           "src": "/public/freetrips/lake3.jpeg",
@@ -117,7 +117,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 2.4,
+          "id": "2,4",
           "title": "Lake Huron",
           "guide": "Mike Jon",
           "src": "/public/freetrips/lake4.jpeg",
@@ -130,7 +130,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 2.5,
+          "id": "2,5",
           "title": "Lake Michigan",
           "src": "/public/freetrips/lake5.jpeg",
           "guide": "Linie Mye",
@@ -150,7 +150,7 @@
       "title": "Desert",
       "freeTrips": [
         {
-          "id": 3.1,
+          "id": "3,1",
           "title": "Antarctica Desert",
           "guide": "Mey Sand",
           "src": "/public/freetrips/desert1.jpeg",
@@ -163,7 +163,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 3.2,
+          "id": "3,2",
           "title": "Arctic Desert",
           "guide": "Loren Ho",
           "src": "/public/freetrips/desert2.jpeg",
@@ -176,7 +176,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 3.3,
+          "id": "3,3",
           "title": "Sahara Desert",
           "guide": "Mia Stone",
           "src": "/public/freetrips/desert3.jpeg",
@@ -189,7 +189,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 3.4,
+          "id": "3,4",
           "title": "Great Australian",
           "guide": "Bill Down",
           "src": "/public/freetrips/desert4.jpeg",
@@ -202,7 +202,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 3.5,
+          "id": "3,5",
           "title": "Arabian Desert",
           "guide": "Pana Free",
           "src": "/public/freetrips/desert5.jpeg",
@@ -222,7 +222,7 @@
       "title": "Forest",
       "freeTrips": [
         {
-          "id": 4.1,
+          "id": "4,1",
           "title": "Monteverde Cloud Forest",
           "src": "/public/freetrips/forest1.jpeg",
           "guide": "John Leaf",
@@ -235,7 +235,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 4.2,
+          "id": "4,2",
           "title": "Daintree Rainforest",
           "guide": "Mike Town",
           "src": "/public/freetrips/forest2.jpeg",
@@ -248,7 +248,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 4.3,
+          "id": "4,3",
           "title": "Amazon Rainforest",
           "guide": "Josep Folter",
           "src": "/public/freetrips/forest3.jpeg",
@@ -261,7 +261,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 4.4,
+          "id": "4,4",
           "title": "Bwindi Impenetrable Forest",
           "guide": "Bill Left",
           "src": "/public/freetrips/forest4.jpeg",
@@ -274,7 +274,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 4.5,
+          "id": "4,5",
           "title": "Arashiyama Bamboo Grove",
           "guide": "Lil Moue",
           "src": "/public/freetrips/forest5.jpeg",
@@ -294,7 +294,7 @@
       "title": "Diving",
       "freeTrips": [
         {
-          "id": 5.1,
+          "id": "5,1",
           "title": "Great Blue Hole",
           "guide": "John Deep",
           "src": "/public/freetrips/diving1.jpeg",
@@ -307,7 +307,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 5.2,
+          "id": "5,2",
           "title": "Barracuda Point",
           "guide": "Mike Boolb",
           "src": "/public/freetrips/diving2.jpeg",
@@ -320,7 +320,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 5.3,
+          "id": "5,3",
           "title": "Darwin Arch",
           "guide": "Josep Water",
           "src": "/public/freetrips/diving3.jpeg",
@@ -333,7 +333,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 5.4,
+          "id": "5,4",
           "title": "Maaya Thila",
           "guide": "Bill Strele",
           "src": "/public/freetrips/diving4.jpeg",
@@ -346,7 +346,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 5.5,
+          "id": "5,5",
           "title": "Richelieu Rock",
           "guide": "Pana Glorbe",
           "src": "/public/freetrips/diving5.jpeg",
@@ -366,7 +366,7 @@
       "title": "Beach",
       "freeTrips": [
         {
-          "id": 6.1,
+          "id": "6,1",
           "title": "Fiji",
           "guide": "John sheel",
           "src": "/public/freetrips/beach1.jpeg",
@@ -379,7 +379,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 6.2,
+          "id": "6,2",
           "title": "Bora Bora",
           "guide": "Mike Sand",
           "src": "/public/freetrips/beach2.jpeg",
@@ -392,7 +392,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 6.3,
+          "id": "6,3",
           "title": "Turks & Caicos",
           "guide": "Josep Sea",
           "src": "/public/freetrips/beach3.jpeg",
@@ -405,7 +405,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 6.4,
+          "id": "6,4",
           "title": "Mauritius",
           "guide": "Bill Flay",
           "src": "/public/freetrips/beach4.jpeg",
@@ -418,7 +418,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 6.5,
+          "id": "6,5",
           "title": "Bahamas",
           "guide": "Pana Ocean",
           "src": "/public/freetrips/beach5.jpeg",
@@ -438,7 +438,7 @@
       "title": "Glacier",
       "freeTrips": [
         {
-          "id": 7.1,
+          "id": "7,1",
           "title": "VATNAJÖKULL",
           "guide": "John Snow",
           "src": "/public/freetrips/glacier1.jpeg",
@@ -451,7 +451,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 7.2,
+          "id": "7,2",
           "title": "ALETSCH",
           "guide": "Mike Greed",
           "src": "/public/freetrips/glacier2.jpeg",
@@ -464,7 +464,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 7.3,
+          "id": "7,3",
           "title": "COLUMBIA ICEFIELD",
           "guide": "Josep Ice",
           "src": "/public/freetrips/glacier3.jpeg",
@@ -477,7 +477,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 7.4,
+          "id": "7,4",
           "title": "PERITO MORENO",
           "guide": "Bill Mon",
           "src": "/public/freetrips/glacier4.jpeg",
@@ -490,7 +490,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 7.5,
+          "id": "7,5",
           "title": "MÝRDALSJÖKULL",
           "guide": "Pana Drela",
           "src": "/public/freetrips/glacier5.jpeg",
@@ -510,7 +510,7 @@
       "title": "Island",
       "freeTrips": [
         {
-          "id": 8.1,
+          "id": "8,1",
           "title": "Baffin Island",
           "guide": "John Iss",
           "src": "/public/freetrips/island1.jpeg",
@@ -523,7 +523,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 8.2,
+          "id": "8,2",
           "title": "Madagascar",
           "guide": "Mike Men",
           "src": "/public/freetrips/island2.jpeg",
@@ -536,7 +536,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 8.3,
+          "id": "8,3",
           "title": "Borneo",
           "guide": "Josep Bre",
           "src": "/public/freetrips/island3.jpeg",
@@ -549,7 +549,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 8.4,
+          "id": "8,4",
           "title": "New Guinea",
           "guide": "Bill Uton",
           "src": "/public/freetrips/island4.jpeg",
@@ -562,7 +562,7 @@
           "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolor optio, ipsam, repellendus voluptatem magni dolorem obcaecati vel, corrupti doloremque harum delectus in eos. Facilis et ipsa, perspiciatis nemo aut voluptatem. Minus tempora sed molestiae, officiis iusto nisi nostrum laborum commodi necessitatibus. Ab iure non eveniet iste dolor qui repellat!"
         },
         {
-          "id": 8.5,
+          "id": "8,5",
           "title": "Greenland",
           "guide": "Pana Wreat",
           "src": "/public/freetrips/island5.jpeg",

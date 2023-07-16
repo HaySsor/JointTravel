@@ -23,7 +23,7 @@
 <script setup lang="ts">
 import { useRoute, useRouter } from 'vue-router'
 import { useFakeSpecificsFetch } from '@/hooks/useFakeFetch'
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onMounted, ref, watch, provide } from 'vue'
 import AppLoader from '@/components/AppLoader.vue'
 import FreeTripsList from '@/components/FreeTripsList.vue'
 import type { freeTrips } from '@/types/types'
@@ -36,6 +36,8 @@ const defLevelSelect = ref<any>(route.query.defLevel || '0')
 const filterList = ref<freeTrips[] | null>(null)
 const maxDefLevelInTrip = ref<number[]>([])
 const numberOfVacancies = ref(route.query.vacancies || '0')
+
+provide('group', route.params.group.toString())
 
 onMounted(async () => {
   const res = await fetchSpecificsData(route.params.group.toString())

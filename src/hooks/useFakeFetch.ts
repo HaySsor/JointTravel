@@ -27,6 +27,20 @@ export const useFakeSpecificsFetch = () => {
   return { fetchSpecificsData }
 }
 
+export const useFakeTripFetch = () => {
+  const fetchSpecificTrip = async (group: string, id: string) => {
+    await wait(1000)
+    const res: Group[] = Trips.trips
+    const findList = res.find((item) => item.title.toLocaleLowerCase() === group)
+    const specificsTips = findList?.freeTrips.find((item) => {
+      return item.id.toString() === id
+    })
+
+    return specificsTips
+  }
+  return { fetchSpecificTrip }
+}
+
 const wait = (time: number) => {
   return new Promise((resolve) => {
     setTimeout(() => {
